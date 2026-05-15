@@ -1,0 +1,70 @@
+/* 1. Global Reset - Ibi bituma nta kintu kirenga ecran */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ibi nibyo bya mbere bituma padding idatuma ikintu kirenga */
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; /* Ibi bituma nta scroll y'iburyo n'ibumoso izaho */
+  background-color: #050505; /* Black theme yacu */
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Fix for Images & Videos */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3. Typography - Ibituma amagambo ataba manini cyane kuri mobile */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Bituma byose bigabanuka gato kuri mobile */
+  }
+}
+
+/* 4. Container Utility - Ibi bifasha paji kuguma hagati */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 5. Custom Scrollbar (Optional - ariko bituma isa neza) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b; /* Yellow scrollbar */
+  border-radius: 10px;
+}
+
+/* 6. Form elements fix */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 1rem;
+  max-width: 100%; /* Ibi bituma input zidatunura kuri mobile */
+}

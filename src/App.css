@@ -1,0 +1,9 @@
+:root {
+  --primary: #f59e0b; /* Amber Yellow */
+  --primary-hover: #d97706;
+  --bg-black: #050505;
+  --card-black: #0f0f0f;
+  --border-grey: #1a1a1a;
+  --text-white: #ffffff;
+  --text-muted: #a1a1aa;
+}

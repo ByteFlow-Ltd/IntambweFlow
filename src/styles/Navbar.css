@@ -1,0 +1,250 @@
+/* Variables */
+:root {
+  --nav-bg: rgba(0, 0, 0, 0.8);
+  --nav-bg-scrolled: #000000;
+  --nav-primary: #facc15; /* Yellow */
+  --nav-text: #ffffff;    /* White text */
+  --nav-text-muted: #9ca3af;
+  --nav-border: #1f2937;
+  --nav-card-bg: #0c0c0c;
+}
+
+/* Root Style */
+.nav-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nav-border);
+  transition: all 0.3s ease;
+}
+
+.nav-scrolled {
+  background-color: var(--nav-bg-scrolled);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.nav-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand & Logo */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--nav-primary);
+}
+
+.brand-logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name-text {
+  color: var(--nav-text);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.brand-name-text span {
+  color: var(--nav-primary);
+}
+
+/* Desktop Links */
+.nav-desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  color: var(--nav-text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: var(--nav-primary);
+}
+
+.nav-item.report-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(250, 204, 21, 0.1);
+  color: var(--nav-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+.nav-item.report-link:hover {
+  background-color: var(--nav-primary);
+  color: #000000;
+}
+
+/* Mobile Toggle Menu Button */
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--nav-text);
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Mobile Menu Overlay System */
+.nav-mobile-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Ifungiye hanze */
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-mobile-overlay.show {
+  right: 0; /* Ifunguka ije imbere */
+}
+
+.mobile-menu-box {
+  background-color: var(--nav-card-bg);
+  width: 85%;
+  max-width: 360px;
+  height: 100%;
+  padding: 2rem;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mobile-logo-display {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--nav-primary);
+}
+
+.mobile-logo-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-inner-close {
+  background: none;
+  border: none;
+  color: var(--nav-text-muted);
+  cursor: pointer;
+}
+
+.mobile-inner-close:hover {
+  color: var(--nav-primary);
+}
+
+.mobile-label {
+  color: var(--nav-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Mobile Links Architecture */
+.mobile-links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.m-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.m-icon-wrapper {
+  color: var(--nav-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-arrow {
+  margin-left: auto;
+  color: var(--nav-text-muted);
+  transition: transform 0.2s ease;
+}
+
+.m-link:hover, .m-link.m-active {
+  background-color: rgba(250, 204, 21, 0.08);
+  border-color: var(--nav-primary);
+}
+
+.m-link:hover .m-arrow {
+  transform: translateX(4px);
+  color: var(--nav-primary);
+}
+
+/* Special Highlight Tab inside Mobile Menu */
+.m-link.highlight-report {
+  background-color: rgba(250, 204, 21, 0.1);
+  border-color: rgba(250, 204, 21, 0.3);
+}
+
+.m-link.highlight-report .report-icon {
+  color: var(--nav-primary);
+}
+
+/* Responsive Trigger */
+@media (max-width: 850px) {
+  .nav-desktop-links {
+    display: none; /* Zimya desktop menu ku mashusho mato */
+  }
+  .nav-mobile-toggle {
+    display: block; /* Garagaza hamburger icon */
+  }
+}

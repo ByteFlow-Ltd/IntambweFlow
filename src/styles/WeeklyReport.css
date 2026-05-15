@@ -1,0 +1,341 @@
+/* Variables System */
+:root {
+  --rp-bg: #000000;           /* Pure Black background */
+  --rp-card: #0c0c0c;         /* Sleek Dark gray cards */
+  --rp-card-hover: #141414;   /* Hover background */
+  --rp-primary: #facc15;      /* Tech Neon Yellow */
+  --rp-primary-hover: #eab308;
+  --rp-text: #ffffff;         /* Sharp white text */
+  --rp-muted: #9ca3af;        /* Dimmed white */
+  --rp-border: #1f2937;       /* Border lines */
+  --rp-success: #22c55e;      /* Green Inflow */
+  --rp-danger: #ef4444;       /* Red Outflow */
+}
+
+/* Base Layout Framework */
+.report-pro-page {
+  background-color: var(--rp-bg);
+  color: var(--rp-text);
+  min-height: 100vh;
+  padding: 120px 5% 60px; /* Umwanya wa fixed navbars */
+  font-family: 'Inter', sans-serif;
+}
+
+.report-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Architecture */
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.pro-badge {
+  background: rgba(250, 204, 21, 0.1);
+  color: var(--rp-primary);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(250, 204, 21, 0.2);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.report-header h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
+.report-header h1 span {
+  color: var(--rp-primary);
+}
+
+.report-header p {
+  color: var(--rp-muted);
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+/* Rank Status Card */
+.performance-status-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--rp-card);
+  border: 1px solid var(--rp-border);
+  padding: 16px 24px;
+  border-radius: 16px;
+}
+
+.p-badge-icon {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(250, 204, 21, 0.1);
+  color: var(--rp-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-badge-info p {
+  color: var(--rp-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+}
+
+.p-badge-info h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--rp-text);
+}
+
+/* Audit Grid System */
+.report-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.audit-card {
+  background-color: var(--rp-card);
+  border: 1px solid var(--rp-border);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.audit-card.yellow-neon:hover { border-color: var(--rp-primary); }
+.audit-card.white-neon:hover { border-color: var(--rp-text); }
+
+.a-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--rp-border);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.a-card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audit-card.yellow-neon .a-card-header h3 svg { color: var(--rp-primary); }
+.audit-card.white-neon .a-card-header h3 svg { color: var(--rp-text); }
+
+.a-rate-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--rp-border);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Card Row Data */
+.a-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--rp-muted);
+}
+
+.data-row strong {
+  color: var(--rp-text);
+}
+
+.data-row.highlight-row {
+  border-top: 1px dashed var(--rp-border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+/* Progress bar inside Card 1 */
+.audit-progress-bar {
+  background-color: rgba(255, 255, 255, 0.04);
+  height: 6px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.audit-progress-fill {
+  background-color: var(--rp-primary);
+  height: 100%;
+  border-radius: 100px;
+}
+
+/* Unique Body Layout inside Card 3 */
+.intelligence-display {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.intelligence-display h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  color: var(--rp-primary);
+}
+
+.intelligence-display p {
+  color: var(--rp-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 6px 0 0 0;
+}
+
+.intel-footer-text {
+  color: var(--rp-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Dynamic Colors classes */
+.text-yellow { color: var(--rp-primary); }
+.text-success { color: var(--rp-success); }
+.text-danger { color: var(--rp-danger); }
+
+/* Weekly Velocity Chart Box */
+.report-chart-section {
+  background-color: var(--rp-card);
+  border: 1px solid var(--rp-border);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.chart-header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.chart-header-title h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-header-title h3 svg { color: var(--rp-primary); }
+
+.chart-subtitle {
+  font-size: 0.8rem;
+  color: var(--rp-muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Chart Canvas Area */
+.report-visual-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 220px;
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px solid var(--rp-border);
+}
+
+.r-chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.r-chart-column .r-bar {
+  background-color: rgba(250, 204, 21, 0.08);
+  border: 1px solid rgba(250, 204, 21, 0.15);
+  width: 35%;
+  max-width: 40px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.r-chart-column:hover .r-bar {
+  background-color: var(--rp-primary);
+  border-color: var(--rp-primary);
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+/* Tooltip settings */
+.r-tooltip {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background-color: var(--rp-text);
+  color: #000000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.r-chart-column:hover .r-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.r-label {
+  color: var(--rp-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+/* Mobile Screens */
+@media (max-width: 650px) {
+  .report-header { flex-direction: column; align-items: flex-start; }
+  .performance-status-card { width: 100%; }
+}

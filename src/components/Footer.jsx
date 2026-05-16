@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import '../styles/Footer.css';
 // Importa ifoto hano
-import LogoImg from '../assets/logo.JPG'; 
+import LogoImg from '../assets/logo.jPG'; 
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'; 
 import { LayoutDashboard, CheckSquare, Wallet, BookOpen, BarChart3, Home, Menu, X, ChevronRight } from 'lucide-react'; 
 import '../styles/Navbar.css'; 
-import LogoImg from '../assets/logo.jPG'; 
+import LogoImg from '../assets/logo.jG'; 
 
 const Navbar = () => { 
   const [isMenuOpen, setIsMenuOpen] = useState(false); 

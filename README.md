@@ -1,5 +1,5 @@
 <div align="center">
-<img width="200" height="202" alt="logo" src="https://github.com/user-attachments/assets/79da8354-f89b-448e-8f6f-d3112aafdb75" />
+<img width="220" height="200" alt="logo" src="https://github.com/user-attachments/assets/79da8354-f89b-448e-8f6f-d3112aafdb75" />
 
 <br/>
 
@@ -223,7 +223,7 @@ Made with ❤️ from Kigali, Rwanda 🇷🇼
 
 <br/>
 
-[![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/intambweflow?style=social)](https://github.com/YOUR_USERNAME/intambweflow)
-[![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/intambweflow?style=social)](https://github.com/YOUR_USERNAME/intambweflow)
+[![Stars](https://img.shields.io/github/stars/ByteFlow-Ltd/intambweflow?style=social)](https://github.com/ByteFlow-Ltd/intambweflow)
+[![Forks](https://img.shields.io/github/forks/ByteFlow-Ltd/intambweflow?style=social)](https://github.com/ByteFlow-Ltd/intambweflow)
 
 </div>
